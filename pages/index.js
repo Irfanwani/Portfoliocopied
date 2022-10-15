@@ -1,12 +1,19 @@
 import {
+  Button,
   Container,
   Box,
   Heading,
   Image,
-  useColorModeValue
+  useColorModeValue,
+  Link
 } from '@chakra-ui/react';
 
+import NextLink from 'next/link';
+
 import Section from '../components/section';
+
+import Parahraph from '../components/paragraph';
+import { ChevronRightIcon } from '@chakra-ui/icons';
 
 const Page = () => {
   return (
@@ -51,7 +58,22 @@ const Page = () => {
         <Heading as="h3" variant="section-title">
           Work
         </Heading>
-        <p>Parahraph</p>
+        <Parahraph>
+          Irfan wani is a self-taught full stack web and app developer who has
+          built multiple projects using Django, react native, redux etc. His
+          github profile is given here;
+          <NextLink href="https://github.com/irfanwani">
+            <Link>Github</Link>
+          </NextLink>
+          .
+        </Parahraph>
+        <Box align="center" my={4}>
+          <NextLink href="/works">
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+              My portfolio
+            </Button>
+          </NextLink>
+        </Box>
       </Section>
     </Container>
   );
