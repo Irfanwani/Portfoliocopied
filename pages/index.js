@@ -15,6 +15,8 @@ import Section from '../components/section';
 import Parahraph from '../components/paragraph';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 
+import { BioSection, BioYear } from '../components/bio';
+
 const Page = () => {
   return (
     <Container>
@@ -74,6 +76,50 @@ const Page = () => {
             </Button>
           </NextLink>
         </Box>
+      </Section>
+
+      <Section deplay={0.2}>
+        <Heading as="h3" variant="section-title">
+          Bio
+        </Heading>
+        <BioSection>
+          <BioYear>Nov, 2001</BioYear>
+          Born in Kashmir, India
+        </BioSection>
+
+        <BioSection>
+          <BioYear>2016</BioYear>
+          Completed my class 10th from Shaheen Public high school, Manigam
+          Ganderbal with a score of 94%.
+        </BioSection>
+        <BioSection>
+          <BioYear>2018</BioYear>
+          Completed my class 12th from Govt. Boys Higher Secondary School,
+          Ganderbal with a score of 86.8%.
+        </BioSection>
+        <BioSection>
+          <BioYear>2022</BioYear>
+          Completed my Bachelor&apos;s in Physics from Central University of
+          Kashmir with a percentage of 75%.
+        </BioSection>
+
+        <BioSection>
+          <BioYear>Present</BioYear>
+          Working as a react native developer at{' '}
+          <Link href="https://appsdeployer.com" target="_blank">
+            AppsDeployer
+          </Link>
+          .
+        </BioSection>
+      </Section>
+
+      <Section delay={0.3}>
+        <Heading as='h3' variant='section-title'>
+          I 💟 
+        </Heading>
+      <Parahraph>
+        Playing Sports like, Cricket 🏏 , Volleyball 🏐, football ⚽  
+      </Parahraph>
       </Section>
     </Container>
   );
